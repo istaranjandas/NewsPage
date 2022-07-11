@@ -8,11 +8,11 @@ export class NewsItem extends Component {
         <div className="card">
             <img className="card-img-top" src={imageUrl} alt={imageUrl}/>
             <div className="card-body">
-            <span class="position-absolute top-0 translate-middle badge rounded-pill bg-danger" style={{zIndex:'1',left:'85%'}}>{source}</span>
+            <span className="position-absolute top-0 translate-middle badge rounded-pill bg-danger" style={{zIndex:'1',left:'85%'}}>{source}</span>
                 <h5 className="card-title">{title}....</h5>
                 <p className="card-text">{description}...</p>
                 <p className="card-text">By {!author?"Unknown":author} on {publishedAt}</p>
-                <a href={newsUrl} target="_blank" rel="noreferrer" className="btn btn-dark">Read more</a>
+                <a href={newsUrl} target="_blank" rel="noopener noreferrer" className="btn btn-dark">Read more</a>
             </div>
         </div>
       </div>
