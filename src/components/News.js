@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import NewsItem from './NewsItem'
 import Loading from './Loading';
 import InfiniteScroll from "react-infinite-scroll-component";
+import defaultImg from '../not_available.jpg'
 
 export class News extends Component {
     capitalizeFirstLetter = (string) => {
@@ -63,7 +64,7 @@ export class News extends Component {
                         <div className="row">
                             {this.state.articles.map((element) => {
                                 return <div className="col-md-4" key={element.url}>
-                                    <NewsItem title={element.title ? element.title : ""} description={element.description ? element.description : ""} imageUrl={element.urlToImage} newsUrl={element.url} author={element.author} date={element.publishedAt} source={element.source.name} />
+                                    <NewsItem title={element.title ? element.title : ""} description={element.description ? element.description : ""} imageUrl={element.urlToImage?element.urlToImage:defaultImg} newsUrl={element.url} author={element.author} date={element.publishedAt} source={element.source.name}/>
                                 </div>
                             })}
                         </div>
