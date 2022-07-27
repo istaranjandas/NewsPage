@@ -46,7 +46,7 @@ const News = (props)=>{
  
         return (
             <>
-                <h1 className="text-center" style={{ margin: '90px 0px' }}>NewsMonkey - Top {capitalizeFirstLetter(props.category)} Headlines</h1>
+                <h1 className="text-center" style={{ margin: '90px 0px' }}>News GEEK - Top {capitalizeFirstLetter(props.category)} Headlines</h1>
                 
                 {loading && <Loading />}
                 <InfiniteScroll
